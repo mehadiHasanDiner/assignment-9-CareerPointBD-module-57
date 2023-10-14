@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .btn-hero {
-  @apply text-white bg-gradient-to-br from-sky-400 to-purple-600 hover:bg-gradient-to-bl focus:ring-1 focus:outline-none focus:ring-purple-800 dark:focus:ring-purple-700  font-serif rounded px-5 py-2.5 text-center ml-2 mb-2;
+  @apply text-white bg-gradient-to-br from-sky-400 to-purple-600 hover:bg-gradient-to-bl focus:ring-1 focus:outline-none focus:ring-purple-800 dark:focus:ring-purple-700  font-serif rounded px-5 py-2.5 text-center;
 }
