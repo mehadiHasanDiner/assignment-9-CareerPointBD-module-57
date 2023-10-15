@@ -1,22 +1,26 @@
 [
     {
-        "category_logo": "https://ibb.co/y0n1nzn",
-        "category-name": "Technology",
-        "job-available": 205
+        "id": 1,
+        "category_logo": "https://i.ibb.co/0BjLfhX/technology.png",
+        "category_name": "Technology",
+        "job_available": 205
     },
     {
-        "category_logo": "https://ibb.co/8jV85JY",
-        "category-name": "Healthcare",
-        "job-available": 150
+        "id": 2,
+        "category_logo": "https://i.ibb.co/r0dmZ4w/health.png",
+        "category_name": "Healthcare",
+        "job_available": 150
     },
     {
-        "category_logo": "https://ibb.co/Fsfzc97",
-        "category-name": "Finance",
-        "job-available": 300
+        "id": 3,
+        "category_logo": "https://i.ibb.co/BC5vHwJ/Finance.png",
+        "category_name": "Finance",
+        "job_available": 300
     },
     {
-        "category_logo": "https://ibb.co/Yfdz4yT",
-        "category-name": "Education",
-        "job-available": 240
+        "id": 4,
+        "category_logo": "https://i.ibb.co/tY27wxP/Education.png",
+        "category_name": "Education",
+        "job_available": 240
     }
 ]

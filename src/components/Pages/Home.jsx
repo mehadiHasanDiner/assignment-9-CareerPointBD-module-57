@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../PageComponents/Banner";
-import JobCategory from "../PageComponents/JobCategory";
+import JobCategories from "../PageComponents/JobCategories";
 
 const Home = () => {
   return (
@@ -8,7 +8,7 @@ const Home = () => {
       <div className="bg-purple-50">
         <Banner />
       </div>
-      <JobCategory />
+      <JobCategories />
     </div>
   );
 };
