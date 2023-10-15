@@ -1,0 +1,22 @@
+[
+    {
+        "category_logo": "https://ibb.co/y0n1nzn",
+        "category-name": "Technology",
+        "job-available": 205
+    },
+    {
+        "category_logo": "https://ibb.co/8jV85JY",
+        "category-name": "Healthcare",
+        "job-available": 150
+    },
+    {
+        "category_logo": "https://ibb.co/Fsfzc97",
+        "category-name": "Finance",
+        "job-available": 300
+    },
+    {
+        "category_logo": "https://ibb.co/Yfdz4yT",
+        "category-name": "Education",
+        "job-available": 240
+    }
+]
