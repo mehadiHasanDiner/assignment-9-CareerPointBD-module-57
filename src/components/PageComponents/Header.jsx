@@ -4,11 +4,13 @@ import bgHeader from "../../assets/bg-header.png";
 const Header = () => {
   return (
     <>
-      <div className="mx-16 bg-purple-50 p-2 rounded-md flex justify-between">
+      <div className="mx-16 bg-purple-50 p-2 rounded-md flex justify-between items-center">
         <div className="pl-8 flex flex-col">
           <h1 className="text-5xl font-bold my-4 leading-normal">
             One Step <br /> Closer To Your <br />
-            <span className="text-purple-500">Dream Job</span>
+            <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-sky-600">
+              Dream Job
+            </span>
           </h1>
           <p className="text-lg pr-16 ">
             Explore thousands of job opportunities with all the information you
