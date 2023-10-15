@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <div className="flex justify-between items-center my-3 mx-16">
+      <div className="flex justify-between items-center mt-4 mb-8 mx-16">
         <div>
           <h3 className="text-2xl font-bold">CareerPointBD</h3>
         </div>

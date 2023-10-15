@@ -4,9 +4,9 @@ import bgHeader from "../../assets/bg-header.png";
 const Header = () => {
   return (
     <>
-      <div className="mx-16 bg-purple-50 p-2 rounded-md flex justify-between items-center">
-        <div className="pl-8 flex flex-col">
-          <h1 className="text-5xl font-bold my-4 leading-normal">
+      <div className="mx-16 bg-purple-50 p-2 rounded-md flex justify-between items-center my-4 py-4">
+        <div className="px-4 flex flex-col">
+          <h1 className="text-5xl font-bold leading-snug">
             One Step <br /> Closer To Your <br />
             <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-sky-600">
               Dream Job
@@ -21,7 +21,7 @@ const Header = () => {
             <button className="btn-hero mt-4 ">Start Applying</button>
           </div>
         </div>
-        <div className="pr-4 ">
+        <div className="">
           <img className="w-full" src={bgHeader} alt="" />
         </div>
       </div>
