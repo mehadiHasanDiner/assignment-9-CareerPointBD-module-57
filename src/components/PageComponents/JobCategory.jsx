@@ -1,7 +1,7 @@
 import React from "react";
 
 const JobCategory = ({ category }) => {
-  console.log(category);
+  // console.log(category);
   const { category_logo, category_name, job_available } = category;
   return (
     <>
