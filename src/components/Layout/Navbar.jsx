@@ -24,7 +24,7 @@ const Navbar = () => {
             </Link>
           </nav>
           <div>
-            <button className="btn-hero">Start Applying</button>
+            <button className="btn-hero"> Start Applying</button>
           </div>
         </div>
       </div>

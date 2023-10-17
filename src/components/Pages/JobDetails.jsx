@@ -9,10 +9,12 @@ import {
   MapPinIcon,
   BuildingOfficeIcon,
 } from "@heroicons/react/24/solid";
+import { addToDB } from "../../utilities/fakeDB";
 
 const JobDetails = () => {
   const { jobId } = useParams();
   const allJobs = useContext(JobsContext);
+  // console.log(allJobs);
 
   const [jobDetails, setJobDetails] = useState([]);
 
@@ -21,7 +23,9 @@ const JobDetails = () => {
     setJobDetails(allJobs.find((job) => job.id === jobId));
   }, [allJobs]);
 
-  console.log(jobDetails);
+  const handleAddToJobCart = () => {
+    addToDB(jobId);
+  };
 
   return (
     <div>
@@ -96,7 +100,9 @@ const JobDetails = () => {
               </p>
             </div>
           </div>
-          <button className="btn-hero mt-4 w-full">Apply Now</button>
+          <button onClick={handleAddToJobCart} className="btn-hero mt-4 w-full">
+            Apply Now
+          </button>
         </div>
       </div>
     </div>
