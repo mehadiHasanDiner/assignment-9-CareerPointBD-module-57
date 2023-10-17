@@ -9,8 +9,7 @@ import { JobsContext } from "../Layout/Main";
 const Home = () => {
   const [jobCart, setJobCart] = useState([]);
 
-  const { allJobs } = useContext(JobsContext);
-  console.log(allJobs);
+  const allJobs = useContext(JobsContext);
 
   const navigate = useNavigate();
 
@@ -18,8 +17,7 @@ const Home = () => {
 
   const handleViewDetails = (job) => {
     navigate(`/${job.id}`);
-    addToDB(job.id);
-    // console.log(job);
+    // addToDB(job.id);
   };
   return (
     <div>

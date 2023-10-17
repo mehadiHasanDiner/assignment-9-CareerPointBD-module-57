@@ -1,14 +1,34 @@
-import React from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { JobsContext } from "../Layout/Main";
+import { getAppliedJob } from "../../utilities/fakeDB";
 
 const JobDetails = () => {
-  const { jobsArray } = useLoaderData();
-
   const { jobId } = useParams();
-  console.log(jobsArray);
+  const allJobs = useContext(JobsContext);
+
+  const [jobDetails, setJobDetails] = useState([]);
+
+  // viewing the job details based on the job ID
+  useEffect(() => {
+    setJobDetails(allJobs.find((job) => job.id === jobId));
+  }, [allJobs]);
+
+  console.log(jobDetails);
+
   return (
     <div>
-      <h2>Job Details: {jobId}</h2>
+      <h1 className="text-5xl text-center">{jobDetails.company_name}</h1>
+
+      <div>
+        <p>Job Description: {jobDetails.job_description}</p>
+        <p>Job Responsibility: {jobDetails.job_responsibility}</p>
+        <p>Educational Requirements:</p>
+        <p>{jobDetails.education}</p>
+        <p>Experiences:</p>
+        <p>{jobDetails.experience}</p>
+      </div>
+      <div></div>
     </div>
   );
 };

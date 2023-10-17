@@ -9,6 +9,7 @@ export const JobsCartContext = createContext([]);
 const Main = () => {
   const { jobsArray, allJobs } = useLoaderData();
   const [jobCart, setJobCart] = useState(jobsArray);
+  // console.log(jobCart);
   return (
     <JobsCartContext.Provider value={[jobCart, setJobCart]}>
       <JobsContext.Provider value={allJobs}>
