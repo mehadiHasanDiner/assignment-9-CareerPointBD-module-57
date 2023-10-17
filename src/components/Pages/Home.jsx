@@ -1,17 +1,23 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Banner from "../PageComponents/Banner";
 import JobCategories from "../PageComponents/JobCategories";
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import FeaturedJobs from "../PageComponents/FeaturedJobs";
-import addToDB from "../../utilities/fakeDB";
+import { addToDB } from "../../utilities/fakeDB";
+import { JobsContext } from "../Layout/Main";
 
 const Home = () => {
   const [jobCart, setJobCart] = useState([]);
-  const jobsData = useLoaderData();
+
+  const { allJobs } = useContext(JobsContext);
+  console.log(allJobs);
+
   const navigate = useNavigate();
 
+  // console.log(allJobs);
+
   const handleViewDetails = (job) => {
-    navigate(`/job/${job.id}`);
+    navigate(`/${job.id}`);
     addToDB(job.id);
     // console.log(job);
   };
@@ -30,7 +36,7 @@ const Home = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 mx-16 ">
-          {jobsData.map((job) => (
+          {allJobs.map((job) => (
             <FeaturedJobs
               job={job}
               key={job.id}

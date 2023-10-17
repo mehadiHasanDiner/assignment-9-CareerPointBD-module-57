@@ -6,21 +6,22 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main from "./components/Layout/Main.jsx";
 import Home from "./components/Pages/Home.jsx";
 import JobDetails from "./components/Pages/JobDetails.jsx";
+import getJobsAndJobCart from "./utilities/loaders.js";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    loader: getJobsAndJobCart,
     children: [
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("jobsData.json"),
       },
       {
-        path: "job/:jobId",
+        path: "/:jobId",
         element: <JobDetails></JobDetails>,
-        loader: ({ params }) => fetch(`jobsData.json/job/${params.jobId}`),
+        loader: ({ params }) => fetch(`jobsData.json/${params.jobId}`),
       },
     ],
   },

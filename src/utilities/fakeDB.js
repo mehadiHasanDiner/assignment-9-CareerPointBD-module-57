@@ -1,4 +1,4 @@
-const addToDB = (id) => {
+export const addToDB = (id) => {
   let jobCart = {};
   const storedJob = localStorage.getItem("job-cart");
   if (storedJob) {
@@ -14,4 +14,11 @@ const addToDB = (id) => {
   localStorage.setItem("job-cart", JSON.stringify(jobCart));
 };
 
-export default addToDB;
+export const getAppliedJob = () => {
+  let jobCart = {};
+  const storedJob = localStorage.getItem("job-cart");
+  if (storedJob) {
+    jobCart = JSON.parse(storedJob);
+  }
+  return jobCart;
+};
