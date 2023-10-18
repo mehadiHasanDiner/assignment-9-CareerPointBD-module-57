@@ -58,7 +58,7 @@ const Home = () => {
         )}
         <div className="text-center my-4">
           <button onClick={() => handleShowAll()} className="btn-hero">
-            {showAll ? "Show All Jobs" : "See Less"}
+            {showAll ? "Show All Jobs" : "Show Less"}
           </button>
         </div>
       </div>
