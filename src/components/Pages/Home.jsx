@@ -3,13 +3,11 @@ import Banner from "../PageComponents/Banner";
 import JobCategories from "../PageComponents/JobCategories";
 import { useNavigate } from "react-router-dom";
 import FeaturedJobs from "../PageComponents/FeaturedJobs";
-import { addToDB } from "../../utilities/fakeDB";
 import { JobsContext } from "../Layout/Main";
 
 const Home = () => {
-  const [jobCart, setJobCart] = useState([]);
-
   const allJobs = useContext(JobsContext);
+  const [showAll, setShowAll] = useState(true);
 
   const navigate = useNavigate();
 
@@ -17,8 +15,12 @@ const Home = () => {
 
   const handleViewDetails = (job) => {
     navigate(`/${job.id}`);
-    // addToDB(job.id);
   };
+
+  const handleShowAll = () => {
+    setShowAll(!showAll);
+  };
+
   return (
     <div>
       <div className="bg-purple-50">
@@ -33,14 +35,31 @@ const Home = () => {
             need. Its your future
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 mx-16 ">
-          {allJobs.map((job) => (
-            <FeaturedJobs
-              job={job}
-              key={job.id}
-              handleViewDetails={handleViewDetails}
-            ></FeaturedJobs>
-          ))}
+        {showAll ? (
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 mx-16 ">
+            {allJobs.slice(0, 4).map((job) => (
+              <FeaturedJobs
+                job={job}
+                key={job.id}
+                handleViewDetails={handleViewDetails}
+              ></FeaturedJobs>
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 mx-16 ">
+            {allJobs.map((job) => (
+              <FeaturedJobs
+                job={job}
+                key={job.id}
+                handleViewDetails={handleViewDetails}
+              ></FeaturedJobs>
+            ))}
+          </div>
+        )}
+        <div className="text-center my-4">
+          <button onClick={() => handleShowAll()} className="btn-hero">
+            {showAll ? "Show All Jobs" : "See Less"}
+          </button>
         </div>
       </div>
     </div>

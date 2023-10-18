@@ -18,7 +18,7 @@ const Banner = () => {
             application from start to finish.
           </p>
           <div className="mt-auto">
-            <button className="btn-hero mt-4 ">Start Applying</button>
+            <button className="btn-hero mt-4 ">Get Started</button>
           </div>
         </div>
         <div className="flex-none w-96">
