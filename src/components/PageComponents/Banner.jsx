@@ -4,8 +4,8 @@ import bgHeader from "../../assets/bg-header.png";
 const Banner = () => {
   return (
     <>
-      <div className="mx-16  p-2 rounded-md flex justify-between items-center py-6">
-        <div className="flex-1">
+      <div className="mx-16  p-2 rounded-md flex flex-col-reverse md:flex-row md:justify-between items-center py-6">
+        <div className="flex-1 text-center md:text-left">
           <h1 className="text-5xl font-bold leading-snug">
             One Step <br /> Closer To Your <br />
             <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-sky-600">
