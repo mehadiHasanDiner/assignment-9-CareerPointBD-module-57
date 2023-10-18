@@ -1,9 +1,10 @@
 import React from "react";
+import Header from "../Layout/Header";
 
 const Statistics = () => {
   return (
     <div>
-      <h2>Statistics</h2>
+      <Header>Assignment Statistics in Graph chart </Header>
     </div>
   );
 };

@@ -10,6 +10,7 @@ import {
   BuildingOfficeIcon,
 } from "@heroicons/react/24/solid";
 import { addToDB } from "../../utilities/fakeDB";
+import Header from "../Layout/Header";
 
 const JobDetails = () => {
   const { jobId } = useParams();
@@ -29,6 +30,7 @@ const JobDetails = () => {
 
   return (
     <div>
+      <Header>Job Details</Header>
       <div className=" mx-16 my-16 grid grid-cols-1 md:grid-cols-4 gap-4">
         <div className="mr-2 col-span-3">
           <p className="py-4 text-justify">

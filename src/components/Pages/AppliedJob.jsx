@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { JobsContext } from "../Layout/Main";
 import { getAppliedJob } from "../../utilities/fakeDB";
 import AppliedJobList from "./AppliedJobList";
+import Header from "../Layout/Header";
 
 const AppliedJob = () => {
   const allJobs = useContext(JobsContext);
@@ -20,6 +21,8 @@ const AppliedJob = () => {
 
   return (
     <div>
+      <Header>Applied Jobs</Header>
+
       {jobsArray.reverse().map((job) => (
         <AppliedJobList key={job.id} job={job}></AppliedJobList>
       ))}

@@ -5,7 +5,7 @@ import instagram from "../../assets/instagram.png";
 
 const Footer = () => {
   return (
-    <div className="mt-16 bg-black text-white px-16 py-12 divide-y-2 divide-purple-900">
+    <div className="mt-16 bg-black text-white px-16 pt-12 pb-2 divide-y-2 divide-purple-900">
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12 mb-6">
         <div>
           <h2 className="text-xl font-bold mb-8">CareerPointBD</h2>
@@ -46,7 +46,12 @@ const Footer = () => {
           <p className="mb-3">+1 777 - 978 - 5570</p>
         </div>
       </div>
-      <div className=""> heool</div>
+      <div className="flex justify-between pt-2">
+        <p>@2023 CareerPointBD. All Rights Reserved</p>
+        <p>
+          Powered by: <strong>CareerPointBD</strong>
+        </p>
+      </div>
     </div>
   );
 };
