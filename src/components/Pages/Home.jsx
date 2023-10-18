@@ -7,7 +7,7 @@ import { JobsContext } from "../Layout/Main";
 
 const Home = () => {
   const allJobs = useContext(JobsContext);
-  const [showAll, setShowAll] = useState(true);
+  const [showAll, setShowAll] = useState(false);
 
   const navigate = useNavigate();
 
@@ -37,7 +37,7 @@ const Home = () => {
         </div>
         {showAll ? (
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 mx-16 ">
-            {allJobs.slice(0, 4).map((job) => (
+            {allJobs.map((job) => (
               <FeaturedJobs
                 job={job}
                 key={job.id}
@@ -47,7 +47,7 @@ const Home = () => {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 mx-16 ">
-            {allJobs.map((job) => (
+            {allJobs.slice(0, 4).map((job) => (
               <FeaturedJobs
                 job={job}
                 key={job.id}
@@ -58,7 +58,7 @@ const Home = () => {
         )}
         <div className="text-center my-4">
           <button onClick={() => handleShowAll()} className="btn-hero">
-            {showAll ? "Show All Jobs" : "Show Less"}
+            {showAll ? "Show Less" : "Show All Jobs"}
           </button>
         </div>
       </div>
