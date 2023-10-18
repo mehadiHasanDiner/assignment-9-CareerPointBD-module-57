@@ -20,8 +20,7 @@ const AppliedJob = () => {
 
   return (
     <div>
-      <h2 className="text-5xl text-center">Applied Job</h2>
-      {jobsArray.map((job) => (
+      {jobsArray.reverse().map((job) => (
         <AppliedJobList key={job.id} job={job}></AppliedJobList>
       ))}
     </div>
