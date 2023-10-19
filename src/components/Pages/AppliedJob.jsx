@@ -4,6 +4,7 @@ import { getAppliedJob } from "../../utilities/fakeDB";
 import AppliedJobList from "./AppliedJobList";
 import Header from "../Layout/Header";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const AppliedJob = () => {
   let jobsArray = [];
@@ -68,7 +69,12 @@ const AppliedJob = () => {
             </button>
           </div>
         ) : (
-          ""
+          <div className="flex items-center">
+            <p className="text-xl font-bold">You haven't applied any job</p>
+            <Link to="/">
+              <button className="btn btn-info ml-4">Go Back</button>
+            </Link>
+          </div>
         )}
       </div>
       {jobsArray.reverse().map((job) => (
