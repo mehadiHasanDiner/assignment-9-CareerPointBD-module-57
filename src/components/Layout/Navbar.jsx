@@ -38,7 +38,7 @@ const Navbar = () => {
                 </h3>
               </Link>
             </div>
-            <div className="w-[35px] bg-purple-100">
+            <div className="w-[350px] bg-purple-100">
               <nav className="md:text-center bg-purple-100 md:py-2 p-4 flex flex-col md:flex-row ">
                 <Link to="/" className="mx-2 hover:font-bold">
                   Home
