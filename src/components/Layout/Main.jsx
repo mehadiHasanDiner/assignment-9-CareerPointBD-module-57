@@ -4,14 +4,20 @@ import { Outlet, useLoaderData } from "react-router-dom";
 import Footer from "./Footer";
 
 export const JobsContext = createContext([]);
-export const JobsCartContext = createContext([]);
+export const LinkToFeatureJob = createContext([]);
 
 const Main = () => {
-  const { jobsArray, allJobs } = useLoaderData();
-  const [jobCart, setJobCart] = useState(jobsArray);
+  const scrollToTarget = () => {
+    const targetDiv = document.getElementById("target");
+    if (targetDiv) {
+      targetDiv.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const { allJobs } = useLoaderData();
+
   // console.log(jobCart);
   return (
-    <JobsCartContext.Provider value={[jobCart, setJobCart]}>
+    <LinkToFeatureJob.Provider value={scrollToTarget}>
       <JobsContext.Provider value={allJobs}>
         <div className="font-serif">
           <Navbar />
@@ -19,7 +25,7 @@ const Main = () => {
           <Footer />
         </div>
       </JobsContext.Provider>
-    </JobsCartContext.Provider>
+    </LinkToFeatureJob.Provider>
   );
 };
 

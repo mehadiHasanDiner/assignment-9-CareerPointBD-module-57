@@ -10,9 +10,6 @@ const Home = () => {
   const [showAll, setShowAll] = useState(false);
 
   const navigate = useNavigate();
-
-  // console.log(allJobs);
-
   const handleViewDetails = (job) => {
     navigate(`/${job.id}`);
   };
