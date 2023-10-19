@@ -6,7 +6,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <div className="sticky top-0 shadow-lg z-10 opacity-75">
+      <div className="sticky top-0 shadow-lg z-10 md:opacity-100 opacity-75">
         <div
           className="float-right p-2 bg-purple-100 md:hidden"
           onClick={() => setOpen(!open)}
@@ -40,16 +40,16 @@ const Navbar = () => {
             </div>
             <div className="w-[400px] bg-purple-100">
               <nav className="md:text-center bg-purple-100 md:py-2 p-4 flex flex-col md:flex-row ">
-                <Link to="/" className="mx-2">
+                <Link to="/" className="mx-2 hover:font-bold">
                   Home
                 </Link>
-                <Link to="/statistics" className="mx-2">
+                <Link to="/statistics" className="mx-2 hover:font-bold">
                   Statistics
                 </Link>
-                <Link to="/appliedJob" className="mx-2">
+                <Link to="/appliedJob" className="mx-2 hover:font-bold">
                   Applied Jobs
                 </Link>
-                <Link to="/blog" className="mx-2">
+                <Link to="/blog" className="mx-2 hover:font-bold">
                   Blog
                 </Link>
               </nav>
