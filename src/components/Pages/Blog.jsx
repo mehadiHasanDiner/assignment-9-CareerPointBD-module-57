@@ -7,10 +7,10 @@ const Blog = () => {
       <Header>Blog </Header>
       <div className="mx-16 mt-8 items-center">
         <div className="border-2 p-3 rounded-md mt-4">
-          <p className="pb-2">
+          <div className="pb-2">
             <strong>Qus-1: </strong> When should we use context API?
-          </p>
-          <p>
+          </div>
+          <div>
             <strong>Ans: </strong> To manage and share state and data throughout
             in React we use Context API. Its particularly useful in situations
             where there have many data or state that many components in the
@@ -24,14 +24,14 @@ const Blog = () => {
               <li className="list-disc">Theming</li>
               <li className="list-disc">User Preferences</li>
             </ul>
-          </p>
+          </div>
         </div>
 
         <div className="border-2 p-3 rounded-md mt-4">
-          <p className="pb-2">
+          <div className="pb-2">
             <strong>Qus-2: </strong> What is custom Hook?
-          </p>
-          <p>
+          </div>
+          <div>
             <strong>Ans: </strong> A custom hook in React is a JavaScript
             function that allows you to encapsulate and reuse logic and stateful
             behavior in functional components. Custom hooks are a core concept
@@ -62,16 +62,16 @@ const Blog = () => {
                 maintainable code structure.
               </li>
             </ul>
-          </p>
+          </div>
         </div>
 
         <div className="border-2 p-3 rounded-md mt-4">
-          <p className="pb-2">
+          <div className="pb-2">
             <strong>Qus-3: </strong> What is{" "}
             <span className="font-mono font-bold">useRef()</span>,{" "}
             <span className="font-mono font-bold">useMemo()</span>
-          </p>
-          <p>
+          </div>
+          <div>
             <strong>Ans: </strong> useRef() and useMemo() are two important
             hooks provided by React for handling specific scenarios in
             functional components.
@@ -95,7 +95,7 @@ const Blog = () => {
                 unnecessary computations.
               </li>
             </ul>
-          </p>
+          </div>
         </div>
       </div>
     </div>

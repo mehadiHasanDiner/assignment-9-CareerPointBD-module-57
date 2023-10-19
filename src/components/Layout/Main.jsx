@@ -7,25 +7,23 @@ export const JobsContext = createContext([]);
 export const LinkToFeatureJob = createContext([]);
 
 const Main = () => {
-  const scrollToTarget = () => {
-    const targetDiv = document.getElementById("target");
-    if (targetDiv) {
-      targetDiv.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // const scrollToFeatureSection = (id) => {
+  //   const targetDiv = document.getElementById(id);
+  //   if (targetDiv) {
+  //     targetDiv.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
   const { allJobs } = useLoaderData();
 
   // console.log(jobCart);
   return (
-    <LinkToFeatureJob.Provider value={scrollToTarget}>
-      <JobsContext.Provider value={allJobs}>
-        <div className="font-serif">
-          <Navbar />
-          <Outlet />
-          <Footer />
-        </div>
-      </JobsContext.Provider>
-    </LinkToFeatureJob.Provider>
+    <JobsContext.Provider value={allJobs}>
+      <div className="font-serif">
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </div>
+    </JobsContext.Provider>
   );
 };
 

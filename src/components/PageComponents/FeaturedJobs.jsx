@@ -11,6 +11,7 @@ const FeaturedJobs = ({ job, handleViewDetails }) => {
     location,
     salary,
   } = job;
+
   return (
     <>
       <div className="border-1  rounded-lg p-6 bg-white shadow-md hover:shadow-xl">

@@ -11,6 +11,8 @@ import {
 } from "@heroicons/react/24/solid";
 import { addToDB } from "../../utilities/fakeDB";
 import Header from "../Layout/Header";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 const JobDetails = () => {
   const { jobId } = useParams();
@@ -24,8 +26,15 @@ const JobDetails = () => {
     setJobDetails(allJobs.find((job) => job.id === jobId));
   }, [allJobs]);
 
+  const MySwal = withReactContent(Swal);
+
   const handleAddToJobCart = () => {
     addToDB(jobId);
+    MySwal.fire({
+      title: <strong>Good job!</strong>,
+      html: <i>You have applied this job successfully</i>,
+      icon: "success",
+    });
   };
 
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
@@ -38,7 +38,7 @@ const Navbar = () => {
                 </h3>
               </Link>
             </div>
-            <div className="w-[400px] bg-purple-100">
+            <div className="w-[35px] bg-purple-100">
               <nav className="md:text-center bg-purple-100 md:py-2 p-4 flex flex-col md:flex-row ">
                 <Link to="/" className="mx-2 hover:font-bold">
                   Home
@@ -55,7 +55,9 @@ const Navbar = () => {
               </nav>
             </div>
             <div className="bg-purple-100 p-4">
-              <button className="btn-hero"> Start Applying</button>
+              <Link to="/">
+                <button className="btn-hero"> Start Applying</button>
+              </Link>
             </div>
           </div>
         </div>

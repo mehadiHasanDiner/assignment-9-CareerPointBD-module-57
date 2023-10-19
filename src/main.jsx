@@ -10,6 +10,7 @@ import getJobsAndJobCart from "./utilities/loaders.js";
 import AppliedJob from "./components/Pages/AppliedJob.jsx";
 import Statistics from "./components/Pages/Statistics.jsx";
 import Blog from "./components/Pages/Blog.jsx";
+import FeaturedJobs from "./components/PageComponents/FeaturedJobs.jsx";
 
 const router = createBrowserRouter([
   {

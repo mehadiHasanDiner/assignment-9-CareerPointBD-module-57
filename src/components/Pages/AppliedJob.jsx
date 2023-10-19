@@ -3,6 +3,7 @@ import { JobsContext } from "../Layout/Main";
 import { getAppliedJob } from "../../utilities/fakeDB";
 import AppliedJobList from "./AppliedJobList";
 import Header from "../Layout/Header";
+import Swal from "sweetalert2";
 
 const AppliedJob = () => {
   let jobsArray = [];
@@ -24,7 +25,15 @@ const AppliedJob = () => {
     const filterRemoteJob = jobsArray.filter(
       (job) => job.job_type === filterValue
     );
-    setAllAppliedJobs(filterRemoteJob);
+    if (filterRemoteJob.length === 0) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "There is no Remote job found",
+      });
+    } else {
+      setAllAppliedJobs(filterRemoteJob);
+    }
   };
 
   const handleFilterOnsiteJob = () => {
@@ -32,7 +41,15 @@ const AppliedJob = () => {
     const filterOnsiteJob = jobsArray.filter(
       (job) => job.job_type === filterValue
     );
-    setAllAppliedJobs(filterOnsiteJob);
+    if (filterOnsiteJob.length === 0) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "There is no Onsite job found",
+      });
+    } else {
+      setAllAppliedJobs(filterOnsiteJob);
+    }
   };
 
   // console.log(appliedJobs);
@@ -41,14 +58,18 @@ const AppliedJob = () => {
     <div>
       <Header>Applied Jobs</Header>
       <div className="flex justify-end mx-16 my-4">
-        <button onClick={handleFilterRemoteJob} className="btn-hero mr-4">
-          {" "}
-          Remote Job
-        </button>
-        <button onClick={handleFilterOnsiteJob} className="btn-hero">
-          {" "}
-          Onsite Job
-        </button>
+        {jobsArray.length > 0 ? (
+          <div>
+            <button onClick={handleFilterRemoteJob} className="btn-hero mr-4">
+              Remote Job
+            </button>
+            <button onClick={handleFilterOnsiteJob} className="btn-hero">
+              Onsite Job
+            </button>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
       {jobsArray.reverse().map((job) => (
         <AppliedJobList key={job.id} job={job}></AppliedJobList>

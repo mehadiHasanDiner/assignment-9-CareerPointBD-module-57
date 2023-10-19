@@ -33,7 +33,10 @@ const Home = () => {
           </p>
         </div>
         {showAll ? (
-          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 mx-16 ">
+          <div
+            id="target"
+            className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 mx-16 "
+          >
             {allJobs.map((job) => (
               <FeaturedJobs
                 job={job}
